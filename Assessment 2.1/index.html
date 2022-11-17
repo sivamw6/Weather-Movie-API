@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>How lazy are you today?</title>
+    <!-- CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+      crossorigin="anonymous"
+    />
+    <link href="./css/styles.css" rel="stylesheet" />
+    <!-- JavaScript -->
+  </head>
+
+  <body>
+    <!-- Heading -->
+    <div id="navbar">
+      <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#"
+            ><img class="logo" src="./img/MAVIS.png" alt="logo"
+          /></a>
+          <button
+            class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#"
+                  ><h1 class="text-white">How lazy do you feel?</h1></a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+    <!-- Main content -->
+    <form action="./weather.html" class="row g-3">
+      <div class="container" id="main-content">
+        <div class="p-4 box text-center">
+          <h1 class="display-4 text-center my-5">
+            Have no idea what to do today?
+          </h1>
+          <p>Let me give you some suggestions for what to do at home.</p>
+          <p></p>
+          <p>First step: Please tell me your name</p>
+
+          <div class="col-auto w-25 mx-auto">
+            <label for="LocationTextBox"></label>
+            <input
+              type="text"
+              name="name"
+              class="form-control "
+              id="nameBox LocationTextBox"
+              placeholder="Your name"
+            />
+          </div>
+        </div>
+        <div class="col-auto text-center">
+          <button
+            type="submit"
+            class="nameBtn btn btn-primary mt-3 mb-5"
+            id="nameBtn"
+          >
+            Next
+          </button>
+        </div>
+      </div>
+    </form>
+
+    <!-- contact me -->
+    <div class="text-center my-3" id="contact">
+      <a class="text-decoration-none text-white" href="./contact.html"
+        >Contact me</a
+      >
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+      integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js"
+      integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./JS/index.js"></script>
+  </body>
+</html>

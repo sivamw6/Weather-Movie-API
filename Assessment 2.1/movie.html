@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Movie Recommendation</title>
+    <!-- CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+      crossorigin="anonymous"
+    />
+    <link href="./css/styles.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div id="navbar">
+      <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="index.html"
+            ><img class="logo" src="./img/MAVIS.png" alt="logo"
+          /></a>
+          <button
+            class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#"
+                  ><h1 class="text-white">Let me recoomend you some movie...</h1></a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+
+    <!-- Main content -->
+    <div class="container" id="main-content">
+      <div class="p-4 box text-center">
+        <h1 class="display-4 text-center my-5">
+          As you decided to stay at home...
+        </h1>
+        <p>Here's are some movies recommened, in case you getting bored.</p>
+        <p></p>
+        <p>To see what's trending today</p>
+      </div>
+
+      <!-- Movie carousel -->
+      <div class="carousel slide w-75 d-block container-fluid" id="carouselExampleCaptions"
+        data-bs-ride="false">
+
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0"
+            class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" 
+            aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+            aria-label="Slide 3"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3"
+            aria-label="Slide 4"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="4"
+            aria-label="Slide 5"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="5"
+          aria-label="Slide 6"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="6"
+          aria-label="Slide 7"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="7"
+          aria-label="Slide 8"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="8"
+          aria-label="Slide 9"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="9"
+          aria-label="Slide 10"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="10"
+          aria-label="Slide 10"></button>
+        </div>
+        
+
+        <div id="carousel-inner" class="carousel-inner"></div>
+
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+          data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+          data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+
+      </div>
+       <!-- Movie carousel end -->
+
+      <div class="container mt-5 box text-center">
+        <h2>Or you can search below to see the rate</h2>
+      </div>
+
+      <!-- Movie search -->
+      <div class="d-block container-fluid w-50 mt-5 text-center">
+        <div class="bg-light p-3 d-flex rounded">
+          <label for="search" class="form-label visually-hidden">Search</label>
+          <input type="text" class="form-control me-2 " id="searchBox" placeholder="Search"/>
+          <button type="button" id="searchButton" class="btn btn-warning">
+            Search
+          </button>
+        </div>
+        <div class="alert alert-danger mt-2" role="alert" id="errorMessage">
+          A simple danger alert—check it out!
+        </div>
+      </div>
+      <!-- Movie search end -->
+
+      <!-- Movie display start -->
+      <div class="container mt-3" id="movieCard">
+        <div class="card " style="width: 18rem">
+          <img id="movieImage" src="" class="card-img-top" alt="..." />
+          <div class="card-body">
+            <h5 class="card-title" id="movieTitle">Card title</h5>
+            <p class="card-text" id="movieText">
+              Some quick example text to build on the card title and make up the
+              bulk of the card's content.
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- Movie display end -->
+
+      <!-- options -->
+
+      <div class="text-start my-5" id="options">
+        <form id="form">
+            <input class="check-btn" value="1" type="radio" name="check">
+            <label for="watchMovie">Nice, I have chosen the movie I want to watch!</label><br>
+            <input class="check-btn" value="2" type="radio" name="check">
+            <label for="ownRoutine">I'm good. I have my own stay-at-home routine</label><br>
+          </div>
+          <div class="col-auto text-end me-5">
+            <button id="next-btn" disabled class="btn btn-primary mt-3 mb-5">Next</button>
+          </div>
+        </form>
+      </div>
+
+
+
+    <!-- Contact -->
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+      integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js"
+      integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="./service/movie.js"></script>
+  </body>
+</html>
